@@ -1,4 +1,4 @@
-package com.mt.chat;
+package com.example.chat;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

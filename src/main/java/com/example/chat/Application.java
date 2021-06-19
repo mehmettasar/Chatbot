@@ -1,4 +1,4 @@
-package com.mt.chat;
+package com.example.chat;
 
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.configuration.BotConfiguration;

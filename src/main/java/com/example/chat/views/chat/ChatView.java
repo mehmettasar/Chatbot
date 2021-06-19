@@ -1,6 +1,6 @@
-package com.mt.chat.views.chat;
+package com.example.chat.views.chat;
 
-import com.mt.chat.views.main.MainView;
+import com.example.chat.views.main.MainView;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.UI;
