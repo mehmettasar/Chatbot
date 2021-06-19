@@ -1,7 +1,7 @@
-package com.example.chat.views.main;
+package com.mt.chatbot.views.main;
 
-import com.example.chat.views.chat.ChatView;
-import com.example.chat.views.join.JoinView;
+import com.mt.chatbot.views.chat.ChatView;
+import com.mt.chatbot.views.join.JoinView;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
