@@ -17,13 +17,13 @@ import com.vaadin.flow.server.VaadinSession;
 @Route("join")
 @CssImport("styles/views/join/join-view.css")
 @RouteAlias(value = "")
-@PageTitle("Vaadin AI Chat")
+@PageTitle("Chatbot")
 public class JoinView extends VerticalLayout {
 
     public JoinView() {
         addClassName(getClass().getSimpleName());
 
-        H1 title = new H1("AI Chat");
+        H1 title = new H1("Chatbot");
         title.addClassName(getClass().getSimpleName() + "-title");
 
         TextField nickname = new TextField();

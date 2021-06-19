@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 
 @CssImport("./styles/shared-styles.css")
 @PWA(name = "Vaadin AI chat", shortName = "Vaadin AI chat")
-@Theme(value = Lumo.class, variant = Lumo.DARK)
+@Theme(value = Lumo.class, variant = Lumo.LIGHT)
 @Push
 public class MainView extends AppLayout implements AfterNavigationObserver {
 
@@ -41,28 +41,27 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
     private List<Bot> bots;
 
     public MainView(List<Bot> bots) {
-        if (VaadinSession.getCurrent().getAttribute("nickname") == null) {
-            UI.getCurrent().navigate(JoinView.class);
-            UI.getCurrent().getPage().reload();
-            return;
-        }
+
+        checkNickname();
 
         this.bots = bots;
         setPrimarySection(Section.DRAWER);
         addToNavbar(new DrawerToggle(), botNameContainer);
         createMenuTabs();
-        Image vaadinImage = new Image("images/vaadin.png", "Vaadin logo");
-        vaadinImage.addClassName("vaadin");
-        Anchor vaadin = new Anchor("https://vaadin.com", vaadinImage);
-        Div poweredBy = new Div(new Span(new Text("Powered by")), vaadin);
-        Div sourceCode = new Div(
-                new Anchor("https://github.com/alejandro-du/vaadin-ai-chat/tree/advanced", "Browse the source code")
-        );
-        Div footer = new Div(poweredBy, sourceCode);
+        Div poweredBy = new Div(new Span(new Text("Powered by mehmettasar")));
+
+        Div footer = new Div(poweredBy);
         footer.addClassName("footer");
         VerticalLayout menu = new VerticalLayout(new H3("Bots:"), tabs, footer);
         menu.addClassName("menu");
         addToDrawer(menu);
+    }
+
+    private void checkNickname() {
+        if (VaadinSession.getCurrent().getAttribute("nickname") == null) {
+            UI.getCurrent().navigate(JoinView.class);
+            UI.getCurrent().getPage().reload();
+        }
     }
 
     private void createMenuTabs() {
