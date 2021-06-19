@@ -7,7 +7,9 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.tabs.Tab;
@@ -29,7 +31,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @CssImport("./styles/shared-styles.css")
-@PWA(name = "Vaadin AI chat", shortName = "Vaadin AI chat")
+@PWA(name = "ChatBot", shortName = "ChatBot")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
 @Push
 public class MainView extends AppLayout implements AfterNavigationObserver {
