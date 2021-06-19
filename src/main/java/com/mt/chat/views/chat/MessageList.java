@@ -1,4 +1,4 @@
-package com.example.chat.views.chat;
+package com.mt.chat.views.chat;
 
 import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.Text;
