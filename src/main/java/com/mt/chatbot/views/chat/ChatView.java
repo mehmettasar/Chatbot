@@ -3,8 +3,8 @@ package com.mt.chatbot.views.chat;
 import com.mt.chatbot.views.MainLayout;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 
 @Route(value = "chat", layout = MainLayout.class)
